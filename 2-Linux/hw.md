@@ -6,7 +6,7 @@ This exercise has two sections. We’ll start with some Linux drills to practice
 
 Let’s get some data to work with. We want to copy the file *2-Linux/data/UP000000625_83333.fasta* to your local machine/server you are working on. We can download it from GitHub or use a ```wget``` command to fetch via the terminal
 ```bash
-wget https://raw.githubusercontent.com/hadasvolk/CompLabNGS/main/2-Linux/data/UP000000625_83333.fasta
+wget https://raw.githubusercontent.com/NGS-course-TAU/CompLabNGS/main/2-Linux/data/UP000000625_83333.fasta
 ```
 This text file contains all protein sequences of the E. coli bacteria, in fasta format. If you’re not familiar with this format, make a quick Google search to get the idea.
 
@@ -71,3 +71,4 @@ Now that we’ve tested Blast a bit, let’s use it to find putative gene orthol
 To extract interesting proteome-scale information we’ll need some more advanced tools that we’ll learn later in the course, so for now just make sure you understand the output by looking at one example: PQN05807.
 
 #### Q4: Search the blast output for PQN05807 (hint: use ```grep```). What is the name of the E. coli protein to which PQN05807 matched? What is the % of sequence identity?
+
