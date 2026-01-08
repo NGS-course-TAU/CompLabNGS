@@ -65,6 +65,8 @@ A file containing the sample information about each of the six is also needed. N
 
 Next, you will need to create a `DESeqDataSet` object from the count matrix and the sample information. This object will be used to perform the differential gene expression analysis.
 
+* Note: replace "factor" with the correct term given the design of this analysis.
+
 ```python
 from pydeseq2.dds import DeseqDataSet
 from pydeseq2.default_inference import DefaultInference
@@ -74,14 +76,14 @@ inference = DefaultInference(n_cpus=8)
 dds = DeseqDataSet(
     counts=counts.T,
     metadata=sample_info,
-    design_factors=['condition'],
+    design_factors=['factor'],
     refit_cooks=True,
     inference=inference
 )
 
 dds.deseq2()
 
-ds = DeseqStats(dds, contrast=['condition', 'YMR253C', 'WT'])
+ds = DeseqStats(dds, contrast=['factor', 'S288C', 'RM11'])
 ds.summary()
 ```
 
@@ -97,6 +99,7 @@ To detect differentially expressed genes, we will use 0.01 as padj cutoffs and 1
 #### Q10: What would be the result of increasing padj_cutoff? How about lfc_cutoff? Explain. (If you are not sure, you can try out different cutoffs)
 
 #### Bonus: In your opinion, is the ratio of DE genes typical (compared to the total number of transcripts)? What possible experimental design issue do you see in the analysis we performed here that could explain this?
+
 
 
 
