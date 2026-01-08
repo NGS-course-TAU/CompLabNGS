@@ -3,9 +3,9 @@
 In this exercise we continue our differential gene expression analysis, comparing transcription profiles between the *S288C* (reference) and *RM11* strains. 
 
 ### Experiment design: 
-*S288C* and *RM11* were grown in optimal conditions, then total *mRNA* was extracted, and libraries were prepared (using a stranded protocol) and sequenced. This experiment was replicated three times, so a total of six samples were sequenced.
+*S288C* and *RM11* were grown in optimal conditions, then total *mRNA* was extracted, and libraries were prepared (using a stranded protocol) and sequenced. This experiment was replicated three times, so a total of six samples were sequenced. Data for this exercise was taken from two different experiments.
 
-* Note: the `BAM` files are available in the Google Drive folder, as they are too large to be stored in the GitHub repository. [Gdrive](https://drive.google.com/drive/folders/1N1pYkeFPUOo4_Hv_Jk2MzgzlZ-LLWXSY?usp=sharing)
+* Note: the `BAM` files are available in the Google Drive folder, as they are too large to be stored in the GitHub repository. [Gdrive](https://drive.google.com/drive/folders/1QeIOP662vIFnPBmGeKLV66tBlQIX1A6c?usp=sharing)
 
 ### Data processing: 
 RNA-seq reads were cleaned and mapped to the *S288C* reference genome using `STAR`, the same way you did in lesson 8. Resulting `BAM` files were filtered, sorted, and indexed. These `BAM` files are the starting point for our analysis today.
@@ -14,17 +14,19 @@ Our main tool in the analysis would be the `DeSeq2` Python package, `PyDESeq`. W
 
 ## Preparing count matrix
 
-We will start by creating a count matrix from the `BAM` files. This matrix will be used as input for the differential gene expression analysis. We will use the `featureCounts` tool from the `subread` package to count the number of reads that map to each transcript.
+We will start by creating a count matrix from the `BAM` files. This matrix will be used as input for the differential gene expression analysis. We will use the `featureCounts` tool from the `subread` package to count the number of reads that map to each transcript, e.g.:
 
 ```bash
-featureCounts -p -a Saccharomyces_cerevisiae.R64-1-1.60.gtf -o counts.tsv -t exon -g transcript_id *.bam
+featureCounts -p -a reference/Saccharomyces_cerevisiae.R64-1-1.110.gtf -o counts_PE.tsv -t exon -g transcript_id mapped_reads/SRR308198*.bam
 ```
 
-#### Q1: Why did we use the `-p` flag in the `featureCounts` command?
+While the data for one starin is paired-end (PE; see terminal command above), the data for the other strain is single-end. Look up online what flag needs to be removed to generated "counts_SE.tsv". After generating both count files, open a new python or jupyter file and start by combining the count files, then proceed to the questions.
+
+#### Q1: Why did we use the `-p` flag in the first `featureCounts` command (shown above)?
 
 #### Q2: What is the meaning of the `-t exon` and `-g transcript_id` flags?
 
-Review the output of the `featureCounts` command. The resulting file, `counts.tsv`, contains the count matrix. Each row in the file represents a transcript, and each column represents a sample. The values in the matrix are the number of reads that map to each transcript in each sample.
+Review the output of the `featureCounts` command. The resulting file, `counts.tsv`, contains the combined count matrix. Each row in the file represents a transcript, and each column represents a sample. The values in the matrix are the number of reads that map to each transcript in each sample.
 
 #### Q3: How many transcripts are in the count matrix?
 
@@ -59,7 +61,7 @@ sns.clustermap(counts.corr())
 
 A file containing the sample information about each of the six is also needed. Namely, from which strain each sample came. A simple TSV file was prepared for you, `sample_info.tsv`. Load this file as a `pandas` dataframe as well with sample names as index.
 
-* Note: make sure the counts dataframe columns names match the sample_info dataframe index.
+* Note: make sure the counts dataframe columns names match the sample_info dataframe index (in values and order!).
 
 Next, you will need to create a `DESeqDataSet` object from the count matrix and the sample information. This object will be used to perform the differential gene expression analysis.
 
@@ -80,7 +82,7 @@ dds = DeseqDataSet(
 dds.deseq2()
 
 ds = DeseqStats(dds, contrast=['condition', 'YMR253C', 'WT'])
-print(ds.summary())
+ds.summary()
 ```
 
 #### Q6: What is the meaning of each of the columns in the results table?
@@ -93,6 +95,9 @@ To detect differentially expressed genes, we will use 0.01 as padj cutoffs and 1
 
 #### Q9: How many DE genes were detected?
 #### Q10: What would be the result of increasing padj_cutoff? How about lfc_cutoff? Explain. (If you are not sure, you can try out different cutoffs)
+
+#### Bonus: In your opinion, is the ratio of DE genes typical (compared to the total number of transcripts)? What possible experimental design issue do you see in the analysis we performed here that could explain this?
+
 
 
 
