@@ -17,7 +17,7 @@ Our main tool in the analysis would be the `DeSeq2` Python package, `PyDESeq`. W
 We will start by creating a count matrix from the `BAM` files. This matrix will be used as input for the differential gene expression analysis. We will use the `featureCounts` tool from the `subread` package to count the number of reads that map to each transcript, e.g.:
 
 ```bash
-featureCounts -p -a reference/Saccharomyces_cerevisiae.R64-1-1.110.gtf -o counts_PE.tsv -t exon -g transcript_id mapped_reads/SRR308198*.bam
+featureCounts -p -a Saccharomyces_cerevisiae.R64-1-1.110.gtf -o counts_PE.tsv -t exon -g transcript_id SRR308198*.bam
 ```
 
 While the data for one starin is paired-end (PE; see terminal command above), the data for the other strain is single-end. Look up online what flag needs to be removed to generated "counts_SE.tsv". After generating both count files, open a new python or jupyter file and start by combining the count files, then proceed to the questions.
@@ -97,6 +97,7 @@ To detect differentially expressed genes, we will use 0.01 as padj cutoffs and 1
 #### Q10: What would be the result of increasing padj_cutoff? How about lfc_cutoff? Explain. (If you are not sure, you can try out different cutoffs)
 
 #### Bonus: In your opinion, is the ratio of DE genes typical (compared to the total number of transcripts)? What possible experimental design issue do you see in the analysis we performed here that could explain this?
+
 
 
 
