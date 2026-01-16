@@ -6,6 +6,8 @@ In this exercise we continue our differential gene expression analysis, comparin
 *S288C* and *RM11* were grown in optimal conditions, then total *mRNA* was extracted, and libraries were prepared (using a stranded protocol) and sequenced. This experiment was replicated three times, so a total of six samples were sequenced. Data for this exercise was taken from two different experiments.
 
 * Note: the `BAM` files are available in the Google Drive folder, as they are too large to be stored in the GitHub repository. [Gdrive](https://drive.google.com/drive/folders/1QeIOP662vIFnPBmGeKLV66tBlQIX1A6c?usp=sharing)
+* Note: the annotation file should be downloaded using: wget http://ftp.ensembl.org/pub/release-110/gtf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.110.gtf.gz
+  (to unzip use gunzip Saccharomyces_cerevisiae.R64-1-1.110.gtf.gz).
 
 ### Data processing: 
 RNA-seq reads were cleaned and mapped to the *S288C* reference genome using `STAR`, the same way you did in lesson 8. Resulting `BAM` files were filtered, sorted, and indexed. These `BAM` files are the starting point for our analysis today.
@@ -99,6 +101,7 @@ To detect differentially expressed genes, we will use 0.01 as padj cutoffs and 1
 #### Q10: What would be the result of increasing padj_cutoff? How about lfc_cutoff? Explain. (If you are not sure, you can try out different cutoffs)
 
 #### Bonus: In your opinion, is the ratio of DE genes typical (compared to the total number of transcripts)? What possible experimental design issue do you see in the analysis we performed here that could explain this?
+
 
 
 
