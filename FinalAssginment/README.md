@@ -1,3 +1,12 @@
+# THE FINAL ASSIGNMENT WILL BE ON MOODLE THIS YEAR (2025-2026)
+
+# THIS INFORMATION IS NOT RELEVANT FOR THE EXAM
+
+(It is kept here in case you are interested in enrichment analyses)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Final Assignment
 
 Dear course participants,
@@ -19,3 +28,4 @@ You will need to submit a single zip file with a main Jupyter notebook with your
 
 
 ### Good luck!
+
