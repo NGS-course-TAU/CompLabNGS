@@ -12,21 +12,21 @@ Please use the *Issues* tab above to ask questions and report problems. Your que
 Our course is all about hands-on experience with NGS data analysis. You'll need to set yourself up with a Unix-based environment. Please follow the instructions on [0-SettingUp](https://github.com/hadasvolk/CompLabNGS/blob/main/0-SettingUp/SettingUp.md) for possible solutions to this task.
 
 ## Course timeline
-| Week | Date | Topic | Slides | Data | Class/HW assignments |
-|:----:|:----:|:-----:|:------:|:----:|:---------------------|
-| 1 | 26/10/2025 | Introduction to NGS and Genomics | [Lecture 1](https://github.com/hadasvolk/CompLabNGS/blob/main/1-IntroToNGS/Lesson1.pdf) | | [Setting up your environment](https://github.com/hadasvolk/CompLabNGS/blob/main/0-SettingUp/SettingUp.md) |
-| 2 | 02/11/2025 | Introduction to Linux and the command line | [Lecture 2](https://github.com/hadasvolk/CompLabNGS/blob/main/2-Linux/Lesson2.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/2-Linux/data) | [Class assignment 1](https://github.com/hadasvolk/CompLabNGS/tree/main/2-Linux/hw.md) |
-| 3 | 09/11/2025 | NGS data quality control and pre-processing | [Lecture 3](https://github.com/hadasvolk/CompLabNGS/tree/main/3-QC/Lesson3.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/3-QC/data) | [Class assignment 2](https://github.com/hadasvolk/CompLabNGS/tree/main/3-QC/hw.md) |
-| 4 | 16/11/2025 | Sequence mapping part I | [Lecture 4](https://github.com/hadasvolk/CompLabNGS/tree/main/4-Mapping1/Lesson4.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/4-Mapping1/data) | [Class assignment 3](https://github.com/hadasvolk/CompLabNGS/tree/main/4-Mapping1/hw.md) |
-| 5 | 23/11/2025 | Sequence mapping part II | [Lecture 5](https://github.com/hadasvolk/CompLabNGS/tree/main/5-Mapping2/Lesson4.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/5-Mapping2/data) | [Class assignment 4](https://github.com/hadasvolk/CompLabNGS/tree/main/5-Mapping2/hw.md) |
-| 6 | 30/11/2025 | Variant calling | [Lecture 6](https://github.com/hadasvolk/CompLabNGS/tree/main/6-VariantCalling/Lesson6.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/6-VariantCalling/data) | [Class assignment 5](https://github.com/hadasvolk/CompLabNGS/tree/main/6-VariantCalling/hw.md) |
-| 7 | 07/12/2025 | Assembly | [Lecture 7](https://github.com/hadasvolk/CompLabNGS/tree/main/7-Assembly/Lesson7.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/7-Assembly/data) | [Class assignment 6](https://github.com/hadasvolk/CompLabNGS/tree/main/7-Assembly/hw.md) |
-| 8 | 14/12/2025 | RNA-Seq I | [Lecture 8](https://github.com/hadasvolk/CompLabNGS/tree/main/8-RNA1/Lesson8.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/8-RNA1/data) | [Class assignment 7](https://github.com/hadasvolk/CompLabNGS/tree/main/8-RNA1/hw.md) |
-| 9 | 28/12/2025 | Python | [Lecture 9](https://github.com/hadasvolk/CompLabNGS/tree/main/9-Python/Lesson9.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/9-Python/data) | [Class assignment 8](https://github.com/hadasvolk/CompLabNGS/tree/main/9-Python/hw.md) |
-| 10 | 04/01/2026 | RNA-Seq II | [Lecture 10](https://github.com/hadasvolk/CompLabNGS/tree/main/10-RNA2/Lesson10.pdf) | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/10-RNA2/data) | [Class assignment 9](https://github.com/hadasvolk/CompLabNGS/tree/main/10-RNA2/hw.md) |
-| 11 | 11/01/2026 | Third Generation Sequencing | [Lecture 11](https://github.com/hadasvolk/CompLabNGS/tree/main/11-3rdGS/Lesson11.pdf) | | |
-| 12 | 18/01/2026 | To be decided / exercises | [Lecture 12] | | |
-| 13 | 25/01/2026 | Exercises | [Lecture 13] | | |
+| Week | Date | Topic | Data |
+|:----:|:----:|:-----:|:----:|
+| 1 | 18/10/2026 | Introduction to NGS and Genomics | |
+| 2 | 25/10/2026 | Introduction to Linux and the command line | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/2-Linux/data) |
+| 3 | 01/11/2026 | NGS data quality control and pre-processing | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/3-QC/data) |
+| 4 | 08/11/2026 | Sequence mapping part I | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/4-Mapping1/data) |
+| 5 | 15/11/2026 | Sequence mapping part II | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/5-Mapping2/data) |
+| 6 | 22/11/2026 | Variant calling | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/6-VariantCalling/data) |
+| 7 | 29/11/2026 | Assembly | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/7-Assembly/data) |
+| 8 | 13/12/2026 | RNA-Seq I | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/8-RNA1/data) |
+| 9 | 20/12/2026 | Python | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/9-Python/data) |
+| 10 | 27/12/2026 | RNA-Seq II | [Data](https://github.com/hadasvolk/CompLabNGS/tree/main/10-RNA2/data) |
+| 11 | 03/01/2027 | Third Generation Sequencing | |
+| 12 | 10/01/2027 | Genome Annotation & Genomic DBs | |
+| 13 | 17/01/2027 | Final project presentation | |
 
 ## Large files
 Some of the files in this repository are large and cannot be viewed directly in the browser. These files are accesible in a Google Drive folder. You can access the folder [here](https://drive.google.com/drive/folders/1N1pYkeFPUOo4_Hv_Jk2MzgzlZ-LLWXSY?usp=sharing)
@@ -34,13 +34,13 @@ Some of the files in this repository are large and cannot be viewed directly in 
 ## Roadmap to final grade of 100
 30 points - Class assignments
 * Starting on lesson 2
-* Two weeks to complete each assignment and submit via Moodle
-* Pass only - no partial credit
+* One week to complete each assignment and submit via Moodle
+* Partial credit (average of best 8 assignments)
 * Must submit at least 8 assignments to pass the course
 
 70 points - Final project
 * Can be done in pairs/threes
-* Submission deadline: 02.03.2025
+* Submission deadline: TBD
 
 ## Download the data | git clone
 If you wish to pull data and material hosted in this GitHub repo automatically and not download each file individually, you can use `git` to `clone` the entire repository to your local machine.
